@@ -50,14 +50,60 @@ This project introduces an integrated **Geospatial MRV Framework** that links dy
 
 | InSAR Surface Velocity Heatmap | LULC Cropping Intensity vs. Subsidence |
 | :---: | :---: |
-| ![InSAR Surface Velocity Map](assets/surface_velocity_map.png) | ![LULC vs InSAR Chart](assets/lulc_vs_insar_graph.png) |
+| <img width="2826" height="1948" alt="Bundelkhand_InSAR_Final_Geographic_Map" src="https://github.com/user-attachments/assets/fbd905b9-2f8a-4d6d-8e7f-738c39bd5dd0" />
+ | <img width="900" height="500" alt="LULC-VS_INSAR" src="https://github.com/user-attachments/assets/b2d5475d-32e4-44ce-9c2d-611ad41b038b" />
+ |
 
 | Regional Displacement Overlay |
 | :---: |
-| ![Displacement Mapping](assets/displacement_mapping.png) |
+| <img width="1536" height="754" alt="Figure_1_-_timeseries_demErr" src="https://github.com/user-attachments/assets/7f65dc7c-d15b-40f5-b6f0-9e0787a55712" />
+<img width="1536" height="754" alt="Cumulative_Displacement_Map" src="https://github.com/user-attachments/assets/4ebd4637-f0fb-4a32-b2d4-64a022471708" />
+ |
+
+---
+## 🏗️ The MRV Framework Structure
+
+```
+┌───────────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                 MRV FRAMEWORK ARCHITECTURE                                        │
+├───────────────────┬───────────────────────────────────────────────────────────────────────────────┤
+│ M - MONITORING    │ • Continuous Sentinel-1 C-band SAR time-series acquisition (12-day orbit)     │
+│                   │ • Small Baseline Subset (SBAS) time-series deformation inversion              │
+│                   │ • Line-of-Sight (LOS) velocity mapping (mm/yr) to detect active surface sink │
+├───────────────────┼───────────────────────────────────────────────────────────────────────────────┤
+│ R - REPORTING     │ • District-level deformation velocity heatmaps (Jhansi, Lalitpur, etc.)       │
+│                   │ • Dual-axis cropping intensity vs. InSAR subsidence rate graphs               │
+│                   │ • Dynamic spatial hazard categorization (Critical / High / Moderate Tiers)    │
+├───────────────────┼───────────────────────────────────────────────────────────────────────────────┤
+│ V - VERIFICATION  │ • Cross-referencing InSAR velocity hotspots against official India-WRIS NRSC  │
+│                   │   (2017–18) LULC ground-truth crop layers                             │
+│                   │ • Ground control validation using stable baselines (Built-up areas & Forests) │
+└───────────────────┴───────────────────────────────────────────────────────────────────────────────┘
+```
 
 ---
 
+## UN Alignment with UN Sustainable Development Goals (SDGs)
+
+This framework directly supports the **UN 2030 Agenda for Sustainable Development** by using satellite remote sensing to monitor localized environmental degradation and guide resilient land management:
+
+* **SDG 6: Clean Water and Sanitation**
+  * **Target 6.6:** *Protect and restore water-related ecosystems.*
+  * **Application:** Provides an empirical monitoring mechanism to detect severe groundwater over-extraction and prevent permanent aquifer aquitard destruction across semi-arid agricultural regions.
+
+* **SDG 11: Sustainable Cities and Communities**
+  * **Target 11.5:** *Reduce the adverse effects of natural disasters.*
+  * **Application:** Uses InSAR hazard tiering (Critical / High / Moderate) to identify land subsidence hotspots early, mitigating structural risks to rural civil infrastructure and housing.
+
+* **SDG 13: Climate Action**
+  * **Target 13.3:** *Build knowledge and capacity to meet climate change.*
+  * **Application:** Equips regional decision-makers with actionable, high-resolution Earth Observation (EO) data to build climate-resilient water management policies under growing drought pressure.
+
+* **SDG 15: Life on Land**
+  * **Target 15.3:** *End land degradation and restore degraded land.*
+  * **Application:** Integrates ground-truth LULC data to prove the protective role of natural forest buffers against land compaction, supporting evidence-based land conservation strategies.
+
+---
 ## 🌿 Policy & Resource Recommendations
 
 1. **Crop Intensity Regulation:** Shift high-density double/triple cropping zones in Jhansi and Lalitpur toward low-water pulses and oilseeds during summer.
